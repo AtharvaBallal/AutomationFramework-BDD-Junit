@@ -1,4 +1,4 @@
-This is UI Automation Framework created using Java, Selenium, Cucumber, Junit.
+This UI Automation Framework was created using Java, Selenium, Cucumber, and Junit.
 
 Supports:
 
@@ -13,5 +13,4 @@ Usages:
 
 
 Created By:
-
 Atharva Ballal.
