@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/Features",
         glue = {"Stepdefinations", "AppHooks"},
-        plugin = {"pretty"},
+        plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "timeline:src/test/resources/Reports/test-output-thread/"},
         tags = "@registeruser"
 )
 public class RunCkues {
