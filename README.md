@@ -7,3 +7,11 @@ Supports:
 3. Re-run Failed scenarios.
 
 Usages: 
+
+
+
+
+
+Created By:
+
+Atharva Ballal.
