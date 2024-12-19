@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 
 public class LoginStep {
 
-    private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
+    private final LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
 
 
     @Given("user is on the login page")

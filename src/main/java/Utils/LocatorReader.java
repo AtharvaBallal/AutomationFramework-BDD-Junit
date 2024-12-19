@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class LocatorReader {
 
-    private static Map<String, JsonNode> locatorsMap = new HashMap<>();
+    private static final Map<String, JsonNode> locatorsMap = new HashMap<>();
 
     // Load the JSON file once when the class is initialized
     static {

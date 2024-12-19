@@ -7,7 +7,7 @@ import org.junit.Assert;
 
 public class RegisterUserStep {
 
-    private RegisterUser RegisterUser = new RegisterUser(DriverFactory.getDriver());
+    private final RegisterUser RegisterUser = new RegisterUser(DriverFactory.getDriver());
 
     @Given("User is on home page")
     public void User_is_on_home_page () {

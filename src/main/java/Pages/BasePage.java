@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
+import java.time.Duration;
 
 public class BasePage{
     WebDriver driver = DriverFactory.getDriver();
@@ -32,7 +32,7 @@ public class BasePage{
         validateLocator(locator);
         try {
             By element = LocatorReader.getLocator(locator);
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(element));
             clickableElement.click();
             System.out.println("Clicked element with locator: " + locator);
@@ -47,7 +47,7 @@ public class BasePage{
         validateLocator(locator);
         try {
             By element = LocatorReader.getLocator(locator);
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement inputElement = wait.until(ExpectedConditions.visibilityOfElementLocated(element));
             inputElement.clear();
             inputElement.sendKeys(text);
@@ -63,7 +63,7 @@ public class BasePage{
         validateLocator(locator);
         try {
             By element = LocatorReader.getLocator(locator);
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement textElement = wait.until(ExpectedConditions.visibilityOfElementLocated(element));
             String text = textElement.getText();
             System.out.println("Retrieved text from element with locator: " + locator);
@@ -79,7 +79,7 @@ public class BasePage{
         validateLocator(locator);
         try {
             By element = LocatorReader.getLocator(locator);
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(element));
             new Select(dropdown).selectByVisibleText(visibleText);
             System.out.println("Selected dropdown option: " + visibleText + " for locator: " + locator);
@@ -94,7 +94,7 @@ public class BasePage{
         validateLocator(locator);
         try {
             By element = LocatorReader.getLocator(locator);
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement attributeElement = wait.until(ExpectedConditions.visibilityOfElementLocated(element));
             String attributeValue = attributeElement.getAttribute(attributeName);
             System.out.println("Retrieved attribute '" + attributeName + "' from element with locator: " + locator);
@@ -110,7 +110,7 @@ public class BasePage{
         validateLocator(locator);
         try {
             By element = LocatorReader.getLocator(locator);
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement hoverElement = wait.until(ExpectedConditions.visibilityOfElementLocated(element));
             Actions actions = new Actions(driver);
             actions.moveToElement(hoverElement).perform();
@@ -126,7 +126,7 @@ public class BasePage{
         validateLocator(locator);
         try {
             By element = LocatorReader.getLocator(locator);
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement visibleElement = wait.until(ExpectedConditions.visibilityOfElementLocated(element));
             boolean isDisplayed = visibleElement.isDisplayed();
             System.out.println("Element with locator: " + locator + " is displayed: " + isDisplayed);
@@ -142,7 +142,7 @@ public class BasePage{
         validateLocator(locator);
         try {
             By element = LocatorReader.getLocator(locator);
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement scrollElement = wait.until(ExpectedConditions.visibilityOfElementLocated(element));
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", scrollElement);
             System.out.println("Scrolled to element with locator: " + locator);
@@ -157,7 +157,7 @@ public class BasePage{
         validateLocator(locator);
         try {
             By element = LocatorReader.getLocator(locator);
-            WebDriverWait wait = new WebDriverWait(driver, 10);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             wait.until(ExpectedConditions.visibilityOfElementLocated(element));
             System.out.println("Waited for element visibility with locator: " + locator);
         } catch (Exception e) {

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class RegisterUser extends BasePage{
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public RegisterUser(WebDriver driver){
         this.driver = driver;
