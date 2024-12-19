@@ -27,8 +27,10 @@ public class ApplicationHooks {
     @Before(order = 1)
     public void launchBrowser(){
         String browserName = prop.getProperty("browser");
+        String url = prop.getProperty("url");
         driverFactory = new DriverFactory();
         driver = driverFactory.init_driver(browserName);
+        driver.get(url);
 
     }
 

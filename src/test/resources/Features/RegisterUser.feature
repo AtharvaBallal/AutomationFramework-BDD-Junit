@@ -3,7 +3,7 @@ Feature: Register a User
   @registeruser
   Scenario: Register user
 
-  Given User opened website
+  Given User is on home page
   Then Verify that home page is visible successfully
   And Click on "Signup / Login" button
   Then Verify "New User Signup!" is visible

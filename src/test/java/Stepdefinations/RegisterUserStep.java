@@ -9,10 +9,9 @@ public class RegisterUserStep {
 
     private RegisterUser RegisterUser = new RegisterUser(DriverFactory.getDriver());
 
-    @Given("User opened website")
-    public void User_opened_website () {
-        String url = "http://automationexercise.com";
-        RegisterUser.getUrl(url);
+    @Given("User is on home page")
+    public void User_is_on_home_page () {
+        System.out.print("User is on home page");
     }
 
 
