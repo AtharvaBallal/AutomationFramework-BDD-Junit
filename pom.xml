@@ -133,6 +133,9 @@
 <!--                </configuration>-->
 <!--            </plugin>-->
 
+
+            <!--            Plugin used for parallel execution with Junit-->
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>

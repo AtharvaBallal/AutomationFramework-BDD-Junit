@@ -18,7 +18,7 @@ public class DriverFactory {
      */
     public WebDriver init_driver(String browser){
 
-		System.out.println("browser value is: " + browser);
+		System.out.println("Browser value is: " + browser);
 
 		if (browser.equals("chrome")) {
             System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver.exe");

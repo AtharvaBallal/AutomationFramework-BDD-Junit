@@ -1,4 +1,4 @@
-package Stepdefinations;
+package StepDefinitions;
 import Drivers.DriverFactory;
 import Pages.LoginPage;
 import io.cucumber.java.en.Given;

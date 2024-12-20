@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         features = "@src/test/resources/RerunLog/Rerun.txt",
-        glue = {"Stepdefinations", "AppHooks"},
+        glue = {"StepDefinitions", "AppHooks"},
         plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "timeline:src/test/resources/Reports/test-output-thread/",
                 "rerun:src/test/resources/RerunLog/Rerun.txt"
