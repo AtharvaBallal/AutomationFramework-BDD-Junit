@@ -1,4 +1,5 @@
 package AppHooks;
+
 import Drivers.DriverFactory;
 import Utils.ConfigReader;
 import io.cucumber.java.After;
@@ -24,27 +25,27 @@ public class ApplicationHooks {
 
     }
 
+
+
     @Before(order = 1)
     public void launchBrowser(){
         String browserName = prop.getProperty("browser");
-        String url = prop.getProperty("url");
         driverFactory = new DriverFactory();
         driver = driverFactory.init_driver(browserName);
-        driver.get(url);
 
     }
 
+    @Before(order = 2)
     public void getUrl(){
         String url = prop.getProperty("url");
         driver.get(url);
     }
 
     @After(order = 0)
-    public void quitBrowser(){
-
-        driver.quit();
-
+    public void quitBrowser() {
+        DriverFactory.quitDriver();
     }
+
 
     @After(order = 1)
     public void tearDown(Scenario scenario){
